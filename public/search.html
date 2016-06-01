@@ -23,15 +23,55 @@
 </head>
 
 <body class="container-fluid">
-    <div class="row splash" id ="splash">
-        <div class="col-xs-12">
-            <h1>Galvanize Movies</h1>
-            <p>Gingerbread bonbon cupcake jelly beans jujubes muffin. Tart dessert croissant gingerbread. Toffee cheesecake brownie chupa chups brownie. Jelly beans jelly-o chocolate gummi bears marzipan jelly croissant topping. Marshmallow topping dragée
-                soufflé jelly beans croissant. Gummi bears apple pie gummies jelly-o jujubes cake sugar plum pastry.
-            </p>
-            <span class="startBtn">
-            <a href="/search.html"><button class="btn btn-default start" type="button">Start Your Search!</button></a>
-          </span>
+<div class="searchTime" id="searchTime">
+    <div class="row ">
+        <nav class="navbar navbar-default header">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Galvanize Movies</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="" id="home"><a href="/index.html">Home<span class=""></span></a></li>
+                        <li><a href="/search.html">Search</a></li>
+                        <li><a href="/add.html">Add a Movie</a></li>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+    </div>
+    <div class="row search">
+        <div class="col-xs-4">
+            <h1>Search</h1>
+        </div>
+        <div class="col-xs-8 searchForm">
+            <form class="movieSearch" action="" method="post">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Enter a Movie!">
+                    <span class="input-group-btn">
+                      <button class="btn btn-default movieSearch" type="submit">Go!</button>
+                    </span>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    <div class="row mine">
+        <div class="col-xs-12 col-md-8">
+            <h1>My Movies</h1></div>
+        <div class="col-xs-6 col-md-4">
+          <output class="searchResult"></output>
         </div>
     </div>
     <div class="row footer">

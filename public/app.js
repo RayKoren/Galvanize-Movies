@@ -1,18 +1,6 @@
 $(document).ready(function(){
   console.log("stuff");
 
-$('#searchTime').hide();
-$('#splash').show();
-
-$(".start").on('click', function(){
-  $('#searchTime').show();
-  $('#splash').hide();
-});
-$(".home").on('click', function(){
-  $('#searchTime').show();
-  $('#splash').hide();
-});
-
   /// info tab pop open ///
  $(function() {
      $('[data-toggle="popover"]').popover()
@@ -26,18 +14,45 @@ $(".home").on('click', function(){
          }
      });
  });
-
-
-
+/// Add Page ///
 $(".add-movie").on('submit', function(event){
   event.preventDefault();
-  console.log(getFormData());
+  console.log( $( this ).serialize());
+//   var formData = $( this ).serialize();
+// });
+//
+//
+// $(".add-movie").click(function(){
+   var form = $(this);
+//
+//   // var formInput = {
+//   //   title: form.find("#title").val(),
+//   //   genre: form.find("#genre").val(),
+//   //   description: form.find("#description").val(),
+//   //   coverPicture: form.find("#coverPicture").val(),
+//   //   rating: form.find("#rating").val()
+//   // };
+    $.post("https://mighty-eyrie-15280.herokuapp.com/films",
+    form.serialize(),
+    function(data, status){
+        console.log("Data: " + data + "\nStatus: " + status);
+    });
 });
 
+// post req to  , data (do .done)
+
+///Search Page ///
+
+$(".movieSearch").on('submit', function(event){
+  event.preventDefault();
+  var input = $(".form-control").val();
+  console.log(input);
+  $.get("https://api.themoviedb.org/3/search/movie?query=" + input + "&api_key=1ba088fb7619598dd41dd19962963592", function(data) {
+    console.log(data);
+    $(".searchResult").append(data.results[0].original_title + " " + data.results[0].overview);
+      });
 
 
-
-
-
-
+$(".searchResult").show();
 });
+}); //end of on ready//

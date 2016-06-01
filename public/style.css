@@ -17,7 +17,7 @@ p {
 }
 }
 .header {
-  background: -webkit-linear-gradient( #8FFFEF, #487F77);
+  background: -webkit-linear-gradient( #8FFFEF, #F2605D);
   border: solid 2px #6E7F7D;
   border-radius: 2rem;
   height: 10rem;
@@ -25,12 +25,11 @@ p {
   color: #DCFFFA;
 }
 .search {
-  background: #8FFFEF;
+  background: -webkit-linear-gradient( #DA3D54, #F2605D);
   border: solid 2px #6E7F7D;
   border-radius: 2rem;
   height: 10rem;
   width:auto;
-  background: -webkit-linear-gradient( #8FFFEF, #487F77);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -43,7 +42,7 @@ p {
 }
 
 .suggest{
-  background: #73CCBF;
+  background: -webkit-linear-gradient( #8FFFEF, #F2605D);
   border: solid 2px #6E7F7D;
   border-radius: 2rem;
   height: 20rem;
@@ -53,14 +52,16 @@ p {
   height: 100%;
 }
 .mine {
-  background: #73CCBF;
+  background: -webkit-linear-gradient( #8FFFEF, #F2605D);
+
   border: solid 2px #6E7F7D;
   border-radius: 2rem;
   height: 20rem;
   width:auto;
 }
 .footer {
-background: #487F77;
+  background: -webkit-linear-gradient( #8FFFEF, #F2605D);
+
 border: solid 2px #6E7F7D;
 border-radius: 2rem;
 height: 10rem;
@@ -96,6 +97,13 @@ color: #DCFFFA;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.message  {
+  display: none;
+}
+.searchResult {
+  display: none;
+
 }
 .end {
 
